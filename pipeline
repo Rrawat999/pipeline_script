@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('connect') {
+            steps {
+                echo 'connecting.. git remote add origin master "https://github.com/Rrawat999/pipeline_script.git"'
+            }
+        }
+        stage('pull') {
+            steps {
+                echo 'pulled.. git pull origin master'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying.. https://github.com/Rrawat999/pipeline_script/GitHub-Auto-Deploy.git GitHub-Auto-Deploy.git'
+            }
+        }
+    }
+}
