@@ -22,9 +22,10 @@ pipeline {
                 echo 'commiting.. git commit -m "modified"'
             }
         }
-	stage('Deploy')
+	stage('Deploy') {
             steps {
                 echo 'Deploying.. git push origin master'
             }
         }
     }
+}
